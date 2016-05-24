@@ -42,10 +42,6 @@ int main(int argc, string argv[])
                 printf("%d", ((p[j]-97)) + o %26 + 97);
             }
 
-
-
-            printf ("%d\n",count);
-
             printf ("count: %d\n", count);
             int shift = (p[j] - 97);
             printf ("shift value: %d\n", shift);
