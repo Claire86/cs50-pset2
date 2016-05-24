@@ -13,7 +13,7 @@ int main(int argc, string argv[])
         if (!isalpha(k[c])){
             printf ("please enter a valid key\n");
             return 1;
-
+        }
         }
     //turns string into int
         int o=atoi(argv[1]);
