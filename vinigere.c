@@ -43,7 +43,7 @@ int main(int argc, string argv[])
             }
 
             printf ("count: %d\n", count);
-            int shift = (p[j] - 97);
+            int shift = (k[count] - 97);
             printf ("shift value: %d\n", shift);
             int co = p[j];
             char code = (shift + co);
