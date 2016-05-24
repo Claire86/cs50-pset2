@@ -8,16 +8,16 @@ int main(int argc, string argv[])
 {
 
     string k = (argv[1]);
+    int count=0;
     //checks to see if key is alphanumeric
     for (int c=0; c<strlen(k);c++){
         if (!isalpha(k[c])){
             printf ("please enter a valid key\n");
             return 1;
-        }
-        }
-    //turns string into int
-        int o=atoi(argv[1]);
         
+
+        }
+            
     //obtain plaintext
         string p= GetString();
         {
@@ -32,18 +32,31 @@ int main(int argc, string argv[])
             if(!isalpha(p[j])){
                 printf ("%c", p[j]);
             }
-            else if(isalpha(p[j])) {
-                count++;
-            }
 
             if (isupper(p[j]))
             {
-                p[j]=tolower(p[j]);
-                printf("%d", ((p[j]-97)) + o %26 + 97);
+                if (count>=strlen(k)){
+                	count=0;
+                }
+                else {
+                	count++;
+                }
+                printf("%d", ((p[j]-65)) + (toupper(k[count]-'A')) %26 + 65);
+                
             }
+            else if (islower(p[j]))
+            {	
+            	if (count>=strlen(k)){
+            		count=0;
+            	}
+            	else{
+            		count++;
+            	}
+            	printf("%d", ((p[j]-97)) + (toupper(k[count]-'A')) %26 + 97);
+			}
 
-            printf ("count: %d\n", count);
-            int shift = (k[count] - 97);
+
+            int shift = (toupper(k[count]-'A') - 97);
             printf ("shift value: %d\n", shift);
             int co = p[j];
             char code = (shift + co);
