@@ -56,7 +56,7 @@ int main(int argc, string argv[])
 			}
 
 
-            int shift = (toupper(k[count]-'A') - 97);
+            int shift = (toupper(k[count]-'A'));
             printf ("shift value: %d\n", shift);
             int co = p[j];
             char code = (shift + co);
