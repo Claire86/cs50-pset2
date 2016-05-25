@@ -3,12 +3,11 @@
 #include <string.h>
 #include <ctype.h>
 #include <stdlib.h>
-
+int count=0;
 int main(int argc, string argv[])
 {
 
     string k = (argv[1]);
-    int count=0;
     //checks to see if key is alphanumeric
     for (int c=0; c<strlen(k);c++){
         if (!isalpha(k[c])){
@@ -25,7 +24,6 @@ int main(int argc, string argv[])
         }
 
     //sets counter for the key
-        int count=0;
         int j=0;
     // starts obtaininig value of each char in plaintext
         for (j=0; j<strlen(p);j++){
@@ -52,7 +50,7 @@ int main(int argc, string argv[])
             	else{
             		count++;
             	}
-            	printf("%d", ((p[j]-97)) + (toupper(k[count]-'A')) %26 + 97);
+            	printf("%c", ((p[j]-97)) + (toupper(k[count]-'A')) %26 + 97);
 			}
 
 
@@ -65,8 +63,5 @@ int main(int argc, string argv[])
 
 
         }
-
-
-        // obtain plaintext and add the value of a onto the plaintext
 }
 }
